@@ -3,7 +3,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Fondo con color HEX */
+    background-color: #000;
+    /* Fondo con color HEX */
     color: #fff;
     height: 100vh;
     display: flex;
@@ -15,21 +16,13 @@ header {
     background-color: #000;
     display: flex;
     align-items: center;
-    padding: 15px 40px;
 }
 
 /* Logo simulado */
 .logo-simulado {
-    width: 40px;
-    height: 40px;
-    background-color: #ffcc00;
-    border-radius: 50%; /* círculo */
+    width: 100px;
+    height: 60px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #000;
-    margin-right: 30px;
 }
 
 /* Navegación */
@@ -40,17 +33,19 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 100%;
+    /*height: 100%;*/
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 nav a:hover,
@@ -71,35 +66,29 @@ nav .activo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 15px;
     text-align: center;
 }
 
-.texto .grand {
+.texto .tituloUno {
     font-family: 'Georgia', serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #ffcc00;
 }
 
-.texto .opening {
-    font-size: 3rem;
+.texto .tituloDos {
+    font-size: 4rem;
     font-weight: bold;
     color: #fff;
 }
 
 .texto p {
     margin: 20px auto;
-    max-width: 500px;
+    max-width: 80%;
     line-height: 1.6;
-}
-
-.btn {
-    background-color: #ffcc00;
-    color: #000;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #aaa;
+    font-size: 18px;
 }
 
 .btn:hover {
@@ -108,59 +97,68 @@ nav .activo {
 
 /* Redes sociales dentro del texto */
 .social {
+    color: #ffcc00;
     margin-top: 30px;
     display: flex;
     gap: 15px;
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #333;
-    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     text-decoration: none;
-    transition: background 0.3s;
 }
 
 /* Colores personalizados para simular logos */
-.facebook { background-color: #3b5998; }
-.twitter { background-color: #1da1f2; }
-.instagram { background-color: #e4405f; }
-.linkedin { background-color: #0077b5; }
+.facebook {
+    background-image: url('/img/ico_fb.png');
+    background-size: cover;
+}
+
+.twitter {
+    background-image: url('/img/ico_x.png');
+    background-size: cover;
+}
+
+.instagram {
+    background-image: url('/img/ico_instagran.png');
+    background-size: cover;
+}
+
+.linkedin {
+    background-image: url('/img/ico_linked.png');
+    background-size: cover;
+}
 
 .icon:hover {
-    opacity: 0.8;
+    background-color: #ffaa00;
 }
 
 /* Columna imagen */
-.imagen {
+.seccionImagen {
     flex: 1;
     display: flex;
+    background-image: url('/img/img01.png');
+    background-size: cover;
 }
 
-.placeholder {
-    width: 100%;
-    height: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #aaa;
-    font-size: 18px;
-}
-.placeholder::before {
-    content: "Espacio reservado para imagen";
+.textImgPrincipal {
+    /*color: #aaa;*/
+    font-size: 5rem;
+    padding: 25px;
+    text-align: center;
+    
 }
 
 /* Pie de página */
 footer {
     background-color: #000;
     text-align: center;
-    padding: 4px;
     color: #aaa;
+    font-size: 12px;
 }
